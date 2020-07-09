@@ -31,7 +31,7 @@ class LocacaoController
             ) {
                 $this->model::insert($dados);
 
-                echo "<script>alert('ok')</script>";
+                echo "<script>alert('Registro inserido com sucesso!')</script>";
                 echo "<script>window.location='listarLocacaoView.php'</script>";
             } else {
                 echo "<script>alert('Cliente menor de idade!')</script>";
@@ -55,7 +55,7 @@ class LocacaoController
             ) {
                 $this->model::update($dados);
 
-                echo "<script>alert('ok')</script>";
+                echo "<script>alert('Registro alterado com sucesso!')</script>";
                 echo "<script>window.location='listarLocacaoView.php'</script>";
             } else {
                 echo "<script>alert('Cliente menor de idade!')</script>";
@@ -70,7 +70,7 @@ class LocacaoController
         //remover, o exclamacao é igual a diferente
         $objModel = $this->model::find($id);
         if (empty($objModel)) {
-            echo "<script>alert('o id informado nao existe!')</script>";
+            echo "<script>alert('O id informado nao existe!')</script>";
             echo "<script>window.location='listarLocacaoView.php'</script>";
         } else {
             $this->model::deletar($id);
